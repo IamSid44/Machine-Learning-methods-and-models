@@ -12,8 +12,14 @@ This folder contains from-scratch and applied neural network notebooks.
   - Autoencoder-driven anomaly detection and threshold analysis.
 - [04_advanced_architectures.ipynb](04_advanced_architectures.ipynb)
   - Comparative experiments for advanced architecture choices.
+- [05_autoencoders_reconstruction.ipynb](05_autoencoders_reconstruction.ipynb)
+  - Autoencoder reconstruction experiments and representation learning.
+- [06_rnn_recurrence.ipynb](06_rnn_recurrence.ipynb)
+  - Sequence modeling with linear baseline, MLP, and vanilla RNN.
 
-## Notes
+## Data and Results
 
-- Some experiments can be expensive to rerun.
-- Saved outputs and result snapshots are included where possible.
+- [recurrence_timeseries.csv](recurrence_timeseries.csv)
+  - Time-series dataset used by the RNN recurrence notebook.
+- [results/06_rnn_autoregressive_forecasting_results.csv](results/06_rnn_autoregressive_forecasting_results.csv)
+- [results/06_rnn_model_losses.csv](results/06_rnn_model_losses.csv)

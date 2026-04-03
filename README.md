@@ -21,9 +21,9 @@ A comprehensive collection of solutions to assignments from the **Statistical Me
 
 This repository serves as a portfolio of statistical and machine learning implementations covering:
 - **Classical ML**: Regression, clustering, tree-based models
-- **Deep Learning**: MLPs, CNNs for image classification and generation
+- **Deep Learning**: MLPs, CNNs, RNNs, and autoencoders
 - **Unsupervised Learning**: K-Means, GMM, dimensionality reduction
-- **Generative Models**: Diffusion models
+- **Generative Models**: Variational autoencoders and diffusion models
 
 Most algorithms are implemented from scratch without relying on high-level abstractions.
 
@@ -158,6 +158,15 @@ Apply custom GMM implementation to perform color-based image segmentation on sat
 
 ---
 
+#### 05 - PCA + Classification
+
+**Problem Statement:**
+Implement PCA from scratch and evaluate feature-space compression through downstream classification performance.
+
+**Notebook:** `clustering/04_pca_classification.ipynb`
+
+---
+
 ### Classification
 
 #### 01 - Multi-Task CNN (Fashion-MNIST)
@@ -274,7 +283,7 @@ Implement a complete MLP from scratch to model the complex Belgium-Netherlands b
 
 ---
 
-#### 02-04 - Additional Neural Network Problems
+#### 02-06 - Additional Neural Network Problems
 
 **Problem Statements:**
 Implementation of advanced neural network architectures and training techniques.
@@ -282,36 +291,30 @@ Implementation of advanced neural network architectures and training techniques.
 **Topics Include:**
 - Feature mapping techniques (raw pixels, Taylor expansion, Fourier features)
 - Image reconstruction using coordinate-based networks
-- Autoencoders for dimensionality reduction and anomaly detection
+- Autoencoders for dimensionality reduction and reconstruction
+- Sequence modeling with linear/MLP/RNN recurrence predictors
 - Evaluation on blurred images with varying Gaussian blur levels
 
 **Notebooks:**
 - `neural-networks/02_*.ipynb`
 - `neural-networks/03_*.ipynb`
 - `neural-networks/04_*.ipynb`
+- `neural-networks/05_*.ipynb`
+- `neural-networks/06_*.ipynb`
 
 ---
 
 ### Generative Models
 
-#### 01 - Diffusion Models
+This section contains dedicated generative model notebooks.
 
-**Problem Statement:**
-Implement and understand diffusion models, a class of generative models that learn to reverse a noise diffusion process to generate samples from data.
+#### 01 - Variational Autoencoders
 
-**Topics Include:**
-- Forward diffusion process (adding noise progressively)
-- Training denoising networks
-- Reverse sampling process (generating from pure noise)
-- Practical implementation and applications
+**Notebook:** `generative-models/01_variational_autoencoders.ipynb`
 
-**Approach:**
-- Understand the mathematical foundation of diffusion
-- Implement forward and reverse processes
-- Train neural networks for denoising
-- Generate samples through iterative refinement
+#### 02 - Diffusion Models
 
-**Notebook:** `generative-models/01_diffusion_models.ipynb`
+**Notebook:** `generative-models/02_diffusion_models.ipynb`
 
 ---
 
