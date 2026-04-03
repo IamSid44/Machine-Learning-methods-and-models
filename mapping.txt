@@ -1,0 +1,25 @@
+# Topic-based organization of SMAI assignments
+
+## Regression
+- Assignment 2 Q1: Linear Regression with Regularization
+
+## Clustering
+- Assignment 2 Q2: K-Means Clustering
+- Assignment 2 Q3: Gaussian Mixture Models (GMM)
+- Assignment 2 Q4: Image Segmentation using GMM
+
+## Classification
+- Assignment 2 Q5-Q7 (need to verify)
+- Assignment 4 Q1: Multi-task CNN (Fashion-MNIST)
+- Assignment 4 Q2: Image Colorization CNN (CIFAR-10)
+- Assignment 4 Q3: Decision Trees for Text Classification
+
+## Neural Networks
+- Assignment 3 Q1: Belgium-Netherlands Border (MLP from scratch)
+- Assignment 3 Q2-Q3: Additional neural network problems
+
+## Generative Models
+- Assignment 5: Diffusion Models
+
+## Utilities / Foundational
+- Assignment 1: Fundamental concepts (dataset analysis, etc.)

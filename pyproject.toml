@@ -1,0 +1,45 @@
+[project]
+name = "smai-solutions"
+version = "1.0.0"
+description = "Solutions to Statistical Methods in AI (SMAI) course assignments from IIIT Hyderabad"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "IamSid44"}]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.14.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "ipython>=8.12.0",
+    "ipywidgets>=8.0.0",
+    "wandb>=0.15.0",
+    "Pillow>=9.5.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "pytest>=7.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
