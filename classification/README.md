@@ -10,8 +10,3 @@ This folder contains supervised learning notebooks focused on image and text cla
   - Encoder-decoder style workflow for image colorization on CIFAR-10.
 - [03_decision_trees_text.ipynb](03_decision_trees_text.ipynb)
   - Decision tree pipeline for sentiment prediction from text-derived features.
-
-## Notes
-
-- These notebooks may involve heavier training and sweeps.
-- Saved outputs are retained to keep the repository showcase-friendly.

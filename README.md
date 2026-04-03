@@ -6,7 +6,6 @@ A comprehensive collection of solutions to assignments from the **Statistical Me
 
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
-- [Notebook Index](#notebook-index)
 - [Problem Descriptions](#problem-descriptions)
   - [Regression](#regression)
   - [Clustering](#clustering)
@@ -26,39 +25,22 @@ This repository serves as a portfolio of statistical and machine learning implem
 - **Unsupervised Learning**: K-Means, GMM, dimensionality reduction
 - **Generative Models**: Diffusion models
 
-All implementations emphasize understanding fundamentals with clean, well-documented code. Most algorithms are implemented from scratch without relying on high-level abstractions.
+Most algorithms are implemented from scratch without relying on high-level abstractions.
 
 ---
 
 ## Repository Structure
 
 ```
-smai-solutions/
-├── regression/                    # Regression and regularization
+Machine-Learning-methods-and-models/
+├── regression/                    # Regression
 ├── clustering/                    # Unsupervised clustering methods
 ├── classification/                # Classification and decision trees
 ├── neural-networks/               # Deep learning and MLPs
 ├── generative-models/             # Generative modeling approaches
-├── utilities/                     # Foundational concepts and data analysis
-├── INDEX.md                       # Central notebook index
-├── README.md                      # This file
-└── pyproject.toml                # uv project configuration
+├── utilities/                     # Foundational concepts and data analysis 
+└── README.md               
 ```
-
-Folder-level mini READMEs:
-- `classification/README.md`
-- `clustering/README.md`
-- `generative-models/README.md`
-- `neural-networks/README.md`
-- `regression/README.md`
-- `utilities/README.md`
-
----
-
-## Notebook Index
-
-Use `INDEX.md` as the main navigation hub for all notebooks:
-- `INDEX.md`
 
 ---
 
@@ -333,7 +315,7 @@ Implement and understand diffusion models, a class of generative models that lea
 
 ---
 
-### Utilities
+### Classical Techniques
 
 #### 01 - K-Nearest Neighbors Classifier
 
@@ -361,61 +343,17 @@ Implement and understand diffusion models, a class of generative models that lea
 
 ## Setup Instructions
 
-### Notebook Output Policy
-
-- This repository is organized to be **showcase-friendly**: many notebooks include saved outputs, plots, and final metrics.
-- For computationally heavy experiments (especially CNNs and diffusion models), saved outputs are retained to avoid unnecessary retraining.
-- Where full historical outputs were unavailable, a short **Results Snapshot** section is added in the notebook to summarize outcomes and interpretation.
-- If you want to fully reproduce any experiment from scratch, run notebook cells top-to-bottom in a fresh kernel.
-
-### Requirements
-
-- Python 3.10+
-- Jupyter Notebook or JupyterLab
 - Dependencies specified in `requirements.txt`
 
-### Installation
-
-#### Option 1: Using `uv` (Recommended)
-
 ```bash
-# Install uv (if not already installed)
+# Install uv 
 pip install uv
 
-# Install dependencies into system Python (no project venv)
+# Install dependencies into system Python 
 uv pip install --system -r requirements.txt
-
-# Optional: install as editable project + dev extras
-uv pip install --system -e .[dev]
-
-# Optional: install CUDA 12.1 PyTorch wheels (GPU)
-uv pip install --system torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
-### Running Notebooks
-
-```bash
-# Start Jupyter
-jupyter notebook
-
-# Or use JupyterLab
-jupyter lab
-```
-
-Navigate to the relevant notebook in the browser and run cells sequentially.
-
-### Reproducibility Notes
-
-- Use a single environment for all folders in this repository to avoid version drift.
-- This repository setup intentionally avoids creating a local project virtual environment.
-- Run heavy deep-learning notebooks only when needed; most showcase outputs are already embedded.
-- If a notebook references Weights & Biases runs, logged artifacts/plots may be visible in saved output even without rerunning sweeps.
-
----
-
-## Usage
-
-Each notebook is self-contained and includes:
+Navigate to the relevant notebook and run cells sequentially. Each notebook is self-contained and includes:
 
 1. **Problem Statement** - Clear description of the task
 2. **Implementation** - Code with explanations
@@ -423,54 +361,13 @@ Each notebook is self-contained and includes:
 4. **Visualization** - Plots, tables, and insights
 5. **Results & Analysis** - Key findings and conclusions
 
-### Running Individual Notebooks
-
-```bash
-# Navigate to the specific notebook in Jupyter
-# Run cells from top to bottom
-# Outputs and visualizations will be displayed inline
-```
-
 ### Key Implementation Highlights
 
 - **From-Scratch Implementations**: K-Means, GMM, Neural Networks, Decision Trees
-- **Clean Code**: Well-documented with clear variable names and structure
 - **Experimentation**: Comprehensive hyperparameter tuning and ablation studies
 - **Visualization**: Rich plots for understanding model behavior
-
----
-
-## Notes
 
 - **Data Files**: Some notebooks require external datasets (MNIST, CIFAR-10, FMNIST). These are downloaded automatically on first run.
 - **GPU Support**: PyTorch operations can leverage GPU if available (CUDA-enabled devices).
 - **Reproducibility**: Most notebooks use fixed random seeds for consistent results.
 - **Dependencies**: See `requirements.txt` for complete list of packages and versions.
-
----
-
-## Course Information
-
-**Course:** Statistical Methods in AI (Monsoon 2025)
-**Instructors:** Prof. Ravi Kiran Sarvadevabhatla, Prof Saikiran Bulusu
-**Institution:** IIIT Hyderabad
-
----
-
-## Author
-
-Created as part of the SMAI course coursework.
-
----
-
-## License
-
-Educational use. See respective assignment PDFs for original problem statements.
-
----
-
-## Feedback
-
-For clarifications or suggestions regarding the implementations, feel free to open an issue or contact.
-
-**Last Updated:** April 2026
