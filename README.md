@@ -1,11 +1,12 @@
-# Statistical Methods in AI - Solutions
+# Statistical Methods in AI
 
-A comprehensive collection of solutions to assignments from the **Statistical Methods in AI (SMAI)** course at IIIT Hyderabad. This repository contains implementations of fundamental to advanced machine learning algorithms, organized by topic with detailed problem statements, approaches, and results.
+A comprehensive collection of solutions to assignments from the **Statistical Methods in AI (SMAI)** course. This repository contains implementations of fundamental to advanced machine learning algorithms, organized by topic with detailed problem statements, approaches, and results.
 
 ## Table of Contents
 
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
+- [Notebook Index](#notebook-index)
 - [Problem Descriptions](#problem-descriptions)
   - [Regression](#regression)
   - [Clustering](#clustering)
@@ -39,9 +40,25 @@ smai-solutions/
 ├── neural-networks/               # Deep learning and MLPs
 ├── generative-models/             # Generative modeling approaches
 ├── utilities/                     # Foundational concepts and data analysis
+├── INDEX.md                       # Central notebook index
 ├── README.md                      # This file
 └── pyproject.toml                # uv project configuration
 ```
+
+Folder-level mini READMEs:
+- `classification/README.md`
+- `clustering/README.md`
+- `generative-models/README.md`
+- `neural-networks/README.md`
+- `regression/README.md`
+- `utilities/README.md`
+
+---
+
+## Notebook Index
+
+Use `INDEX.md` as the main navigation hub for all notebooks:
+- `INDEX.md`
 
 ---
 
@@ -344,6 +361,13 @@ Implement and understand diffusion models, a class of generative models that lea
 
 ## Setup Instructions
 
+### Notebook Output Policy
+
+- This repository is organized to be **showcase-friendly**: many notebooks include saved outputs, plots, and final metrics.
+- For computationally heavy experiments (especially CNNs and diffusion models), saved outputs are retained to avoid unnecessary retraining.
+- Where full historical outputs were unavailable, a short **Results Snapshot** section is added in the notebook to summarize outcomes and interpretation.
+- If you want to fully reproduce any experiment from scratch, run notebook cells top-to-bottom in a fresh kernel.
+
 ### Requirements
 
 - Python 3.10+
@@ -358,36 +382,14 @@ Implement and understand diffusion models, a class of generative models that lea
 # Install uv (if not already installed)
 pip install uv
 
-# Create and activate virtual environment
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+# Install dependencies into system Python (no project venv)
+uv pip install --system -r requirements.txt
 
-# Install dependencies
-uv pip install -r requirements.txt
-```
+# Optional: install as editable project + dev extras
+uv pip install --system -e .[dev]
 
-#### Option 2: Using `pip` and `venv`
-
-```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-#### Option 3: Using `conda`
-
-```bash
-# Create environment
-conda create -n smai python=3.10
-
-# Activate environment
-conda activate smai
-
-# Install dependencies
-pip install -r requirements.txt
+# Optional: install CUDA 12.1 PyTorch wheels (GPU)
+uv pip install --system torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ### Running Notebooks
@@ -401,6 +403,13 @@ jupyter lab
 ```
 
 Navigate to the relevant notebook in the browser and run cells sequentially.
+
+### Reproducibility Notes
+
+- Use a single environment for all folders in this repository to avoid version drift.
+- This repository setup intentionally avoids creating a local project virtual environment.
+- Run heavy deep-learning notebooks only when needed; most showcase outputs are already embedded.
+- If a notebook references Weights & Biases runs, logged artifacts/plots may be visible in saved output even without rerunning sweeps.
 
 ---
 
